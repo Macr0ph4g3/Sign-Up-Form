@@ -52,15 +52,23 @@ table {
     font-family: Odin;
     src:url(/Norse-Bold.otf)
 }
+html {
+    height: 100%;
+  }
+  body {
+    min-height: 100%;
+  }
 :root {
     --left-position: 30vw;
     --right-position: 65vw;
+    --right-paddingleft: 5vw;
     font-family: sans-serif;
 }
 .web {
     display: flex;
     width: 100vw;
-    height: 100vh   ;
+    height: 100vh
+
 }
 .logo {
     display: flex;
@@ -97,6 +105,7 @@ table {
     background-repeat: no-repeat;
     background-size: center;
     background-position: center;
+;
 }
 
 .right {
@@ -104,18 +113,17 @@ table {
     flex-direction: column;
     background-color: white;
     width: var(--right-position);
-    height:100vh;
 }
 
 
 .header {
     width: 45vw;
-    padding-top: 15vh;
+    padding-top: 10vh;
     font-size: 30px;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
     line-height: 1.2;
-    padding-left: 5vw;
+    padding-left: var(--right-paddingleft);
 
 }
 span {
@@ -128,53 +136,19 @@ span {
     font-size: 30px;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
-    padding-left: 5vw;
+    padding-left: var(--right-paddingleft);
     
 
 }
 
 .test {
-    width: 45vw;
-    display: flex;
-    flex-flow: row wrap;
-    gap: 20px;
-    flex-grow: 1;
-    padding-left: 5vw;
-
-
-}
-
-.form input {
-        box-sizing: border-box;
-        padding-left: 15px;
- }
-
-.form input:focus {
-    border-style: solid;
-    border-color: #6486E4;
-    border-radius: 2px;
- 
-}
-
-textarea:focus, input:focus{
-    outline: none;
-}
-
-
-.input {
-    display: flex;
-    flex-direction: column;
-    width: 20vw;
-}
-.border {
-    border-radius: 4px;
-    height: 30px;
-    border: none;
+    padding-left: var(--right-paddingleft);
+    font-weight: bolder;
+    font-size: 30px;
 }
 .footer {
-    height: 10vh;
     padding-top: 5vh;
-    padding-left: 5vw;
+    padding-left: var(--right-paddingleft);
 
 }
 #submit {
@@ -191,14 +165,8 @@ textarea:focus, input:focus{
 .submit {
     border-top: 25px;
     border-color: black;
-    padding-left: 5vw;
+    padding-left: var(--right-paddingleft);
     padding-top: 3vh;
-}
-.input>label {
-    letter-spacing: 3px;
-    font-size: smaller;
-    font-weight: bold;
-    color: #444C58;
 }
 
 
@@ -207,6 +175,7 @@ textarea:focus, input:focus{
 }
 .login {
     color: #596D48;
+    font-weight: bolder;
 }
 
 .shadow{
@@ -217,8 +186,69 @@ textarea:focus, input:focus{
 
 }
 
+
+/* label CSS */
+
+.input>label {
+    letter-spacing: 3px;
+    font-size: smaller;
+    font-weight: bold;
+    color: #444C58;
+    padding-bottom: 5px;
+    padding-right: 15vw;
+}
+
+/* form css */
+
+.main {
+    width: 50vw;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    flex-grow: 1;
+    padding-left: var(--right-paddingleft);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+}
+.input {
+    width: 24vw;
+}
+.border {
+    border: 2px;
+}
+
+
+.form input {
+    box-sizing: border-box;
+    padding-left: 35px;
+    height: 35px;
+    width: 20vw;
+}
+
+.form input:focus, textarea:focus {
+    border-style: solid;
+    border-color: #6486E4;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 2px;
+}
+
 input {
     font-size:large;
     color: black;
-
 }
+
+
+input:required:focus:valid {
+    background: url("/Check.svg") no-repeat 2% 50% lightgreen;
+background-size: 20px; 
+}
+
+input:focus:invalid {
+    background: url("/Error.svg") no-repeat 2% 50% lightsalmon;
+    background-size: 20px;
+  }
