@@ -1,0 +1,224 @@
+/* HTML5 display-role reset for older browsers
+Meyer CSS Reset
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My CSS */
+
+@font-face {
+    font-family: Odin;
+    src:url(/Norse-Bold.otf)
+}
+:root {
+    --left-position: 30vw;
+    --right-position: 65vw;
+    font-family: sans-serif;
+}
+.web {
+    display: flex;
+    width: 100vw;
+    height: 100vh   ;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    position:absolute;
+    top: 25vh;
+    height: 150px;
+    opacity: 1;
+    width: var(--left-position);
+}
+.opacity {
+    position:absolute;
+    top: 25vh;
+    height: 150px;
+    background-color: black;
+    opacity: .6;
+    width: var(--left-position);
+
+}
+
+.logo>p{
+    font-size: x-large;
+    opacity: 1;
+    color: white;
+    align-self: center;
+    font-family: 'Odin';
+    font-size: 80px;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    width: var(--left-position);
+    background-image:url(/leaves.webp);
+    background-repeat: no-repeat;
+    background-size: center;
+    background-position: center;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: var(--right-position);
+    height:100vh;
+}
+
+
+.header {
+    width: 45vw;
+    padding-top: 15vh;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.2;
+    padding-left: 5vw;
+
+}
+span {
+    font-style: italic;
+}
+
+.secondhdr {    
+    width: 45vw;
+    padding-top: 6vh;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 5vw;
+    
+
+}
+
+.test {
+    width: 45vw;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    flex-grow: 1;
+    padding-left: 5vw;
+
+
+}
+
+.form input {
+        box-sizing: border-box;
+        padding-left: 15px;
+ }
+
+.form input:focus {
+    border-style: solid;
+    border-color: #6486E4;
+    border-radius: 2px;
+ 
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+
+.input {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+}
+.border {
+    border-radius: 4px;
+    height: 30px;
+    border: none;
+}
+.footer {
+    height: 10vh;
+    padding-top: 5vh;
+    padding-left: 5vw;
+
+}
+#submit {
+    background-color: #596D48;
+    color: white;
+    height: 60px;
+    width: 270px;
+    border-radius: 5px;
+    border-color: #596D48;
+    font-size: large;
+    font-weight: bold;
+
+}
+.submit {
+    border-top: 25px;
+    border-color: black;
+    padding-left: 5vw;
+    padding-top: 3vh;
+}
+.input>label {
+    letter-spacing: 3px;
+    font-size: smaller;
+    font-weight: bold;
+    color: #444C58;
+}
+
+
+.footer {
+    font-weight: 400;
+}
+.login {
+    color: #596D48;
+}
+
+.shadow{
+    height: 10px;
+    width: var(--right-position);
+    background-image: linear-gradient(rgb(214, 214, 214), #ffffff);
+    margin-top: 25px;
+
+}
+
+input {
+    font-size:large;
+    color: black;
+
+}
